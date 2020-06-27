@@ -14,7 +14,7 @@ CREATE TABLE quizzes (
 id SERIAL PRIMARY KEY NOT NULL,
 user_id INTEGER REFERENCES users(id),
 title VARCHAR(255),
-date_created DATE,
+time_created TIMESTAMP,
 subject VARCHAR(255),
 public BOOLEAN DEFAULT TRUE
 );
@@ -37,6 +37,7 @@ CREATE TABLE answers (
 
 DROP TABLE IF EXISTS questions CASCADE;
 CREATE TABLE questions (
+  id SERIAL PRIMARY KEY NOT NULL,
   quiz_id INTEGER REFERENCES quizzes(id),
   question_text TEXT
 );
