@@ -1,0 +1,10 @@
+.user-quiz {
+  border: solid black 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-questions {
+  background-color: orange;
+  height: 400px;
+}
