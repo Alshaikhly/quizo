@@ -51,12 +51,16 @@ button {
 .quizzes-display {
   /* background-color: orange; */
   height: 150px;
-  display: flex;
-  justify-content: space-between;
   padding: 0px 40px;
 }
 
 .user-quiz{
   border: solid pink 3px;
   padding: 0px 60px;
+}
+
+#quiz-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

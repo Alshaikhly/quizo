@@ -4,7 +4,13 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/body.css" type="text/css" />
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="scripts/client.js"></script>
   </head>
+
 
   <body class="body-box">
     <div class="body-wrap">
@@ -44,18 +50,7 @@
         <div class ="body-inner-quizzes-title">
           <p>User's Quizzes</p>
         </div>
-
-        <div class ="quizzes-display">
-          <div class ="user-quiz">
-            <p>Quiz 1</p>
-          </div>
-          <div class ="user-quiz">
-            <p>Quiz 2</p>
-          </div>
-          <div class ="user-quiz">
-            <p>Quiz 3</p>
-          </div>
-        </div>
+        <section id="quiz-container"></section>
       </div>
 
     </div>

@@ -30,3 +30,24 @@ Add         POST    /quizzes
 Delete      POST    /quizzes/:id/delete
 
 -WireFram
+
+
+
+
+DAY 2
+
+make ajax request that is contained in document ready function
+
+loadQuizzes function 
+first create html layout for each quiz thats has to laod
+
+Load quiz function
+just going to render all the json in our database from /quizzes
+
+renderQuizzes functions
+loops through the quizzes 
+ 
+createQuiz function
+create the quiz element 
+
+
