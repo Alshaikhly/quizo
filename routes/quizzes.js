@@ -14,9 +14,10 @@ module.exports = (db) => {
           .json({ error: err.message });
       });
   });
-  router.get("/:id", (req, res) => {
-    console.log(req.params);
-    res.json(req.params);
+
+  router.get("/new", (req, res) => {
+    res.render("../views/quiz");
   });
+  
   return router;
 };
