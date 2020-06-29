@@ -8,42 +8,30 @@ const createQuizElement = quiz => {
       </div>
   </div>
   `
-    return quizElement;
+  return quizElement;
 }
 
 const renderQuizzes = function(quizzes) {
 
   for (const quiz of quizzes) {
-console.log(quiz.title)
+    console.log(quiz.title)
     let $quizElement = createQuizElement(quiz);
     $('#quiz-container').prepend($quizElement);
   }
 };
 
-// const submitQuiz = function(data) {
-//   return $.ajax({
-//     method: "POST",
-//     url: "/quizzes",
-//     data,
-//   });
-// }
-
-let showForm = false;
-
 
 
 $(document).ready(function() {
-    console.log('check check');
-
-    $("#create-quiz-button").click(function() {
-      if (!showForm) {
-        showForm = true;
-        $("#quiz-form").slideDown("fast");
-      } else {
-        showForm = false;
-        $("#quiz-form").slideUp("fast");
-      }
-    });
+  console.log('check check');
+  $("#quiz-form").hide();
+  $("#create-quiz-button").on('click', function(event) {
+    if ($('#quiz-form').is(':hidden')) {
+      $("#quiz-form").slideDown();
+    } else {
+      $("#quiz-form").slideUp();
+    }
+  });
 
   const loadquizzes = () => {
     $.getJSON('/quizzes/')
@@ -61,9 +49,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     const data = $(this).serialize();
-    // submitQuiz(data)
-    // .then(function() {
-      $.post('/quizzes',data)
+    $.post('/quizzes',data)
       .then(function(data) {
         console.log('THIS IS MY DATA>>>>', data)
         loadquizzes();
