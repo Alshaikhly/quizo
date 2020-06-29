@@ -50,4 +50,9 @@ loops through the quizzes
 createQuiz function
 create the quiz element 
 
+styling the main page;
+* forms in columns
+* all quizzes on screen
+* responsive
+* form disappearing after "submit"
 
