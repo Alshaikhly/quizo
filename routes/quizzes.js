@@ -59,7 +59,7 @@ module.exports = (db) => {
             VALUES($1, $2, $3), ($1, $4, $3), ($1, $5, $3), ($1, $6, $3);`,
             [questionId, req.body.answer2_text1, false, req.body.answer2_text2, req.body.answer2_text3, req.body.answer2_text4])
               .then(function(answerq2) {
-                console.log('answer q2 is  giving me problems   ', answerq2);
+                console.log('answer q2 is  giving me problems   ', answerq2.rows);
                 res.json(answerq2.rows);
               });
           });

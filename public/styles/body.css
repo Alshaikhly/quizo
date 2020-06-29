@@ -81,5 +81,5 @@ button {
 #quiz-form div {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: flex;
 }
