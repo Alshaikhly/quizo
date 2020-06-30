@@ -13,18 +13,23 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="/styles/quiz.css" type="text/css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="/public/scripts/takingQuiz.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"></script>
+<script src="/scripts/takingQuiz.js"></script>
 <!-- <script src="../../public/scripts/takingQuiz.js"></script> -->
 <!------ Include the above in your HEAD tag ---------->
 
-<div class="container-fluid bg-info">
+<div class="container-fluid bg-info"></div>
     <div class="modal-dialog">
       <div class="modal-content">
          <div class="modal-header">
-            <h3><span class="label label-warning" id="qid">2</span> THREE is CORRECT</h3>
+            <h3><span class="label label-warning" id="qid1">1</span> <%= a1.quiz_id %></h3>
+            <h3><span class="label label-warning" id="qid">1</span> <%= a1.question_text %></h3>
         </div>
         <div class="modal-body">
+
             <div class="col-xs-3 col-xs-offset-5">
                <div id="loadbar" style="display: none;">
                   <div class="blockG" id="rotateG_01"></div>
@@ -38,12 +43,31 @@
               </div>
             </div>
 
-          <div class="quiz" id="quiz" data-toggle="buttons">
-            <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">1 One</label>
-            <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">2 Two</label>
-            <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">3 Three</label>
-            <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">4 Four</label>
+          <div class="quiz" id="question1" data-toggle="buttons">
+            <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q1a1" type="radio" name="q_answer" value="<%=a1.true_false%>"><%= a1.answer_text %><p class="t-f1"></p></label>
+            <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q1a2" type="radio" name="q_answer" value="<%=a2.true_false%>"><%= a2.answer_text %><p class="t-f2"></p></label>
+            <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q1a3" type="radio" name="q_answer" value="<%=a3.true_false%>"><%= a3.answer_text %><p class="t-f3"></p></label>
+            <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q1a4" type="radio" name="q_answer" value="<%=a4.true_false%>"><%= a4.answer_text %><p class="t-f4"></p></label>
           </div>
+          <div class="modal-header">
+            <h3><span class="label label-warning" id="qid">2</span> <%= a5.question_text %></h3>
+        </div>
+        <div class="quiz" id="question2" data-toggle="buttons">
+            <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q2a1" type="radio" name="q_answer" value="<%=a5.true_false%>"><%= a5.answer_text %><p class="t2-f4"></p></label>
+            <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q2a2" type="radio" name="q_answer" value="<%=a6.true_false%>"><%= a6.answer_text %><p class="t2-f4"></p></label>
+            <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q2a3" type="radio" name="q_answer" value="<%=a7.true_false%>"><%= a7.answer_text %><p class="t2-f4"></p></label>
+            <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q2a4" type="radio" name="q_answer" value="<%=a8.true_false%>"><%= a8.answer_text %><p class="t2-f4"></p></label>
+          </div>
+          <div class="modal-header">
+            <h3><span class="label label-warning" id="qid">3</span> <%= a9.question_text %></h3>
+        </div>
+        <div class="quiz" id="question3" data-toggle="buttons">
+            <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q3a1" type="radio" name="q_answer" value="<%=a9.true_false%>"><%= a9.answer_text %><p class="t3-f4"></p></label>
+            <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q3a2" type="radio" name="q_answer" value="<%=a10.true_false%>"><%= a10.answer_text %><p class="t3-f4"></p></label>
+            <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q3a3" type="radio" name="q_answer" value="<%=a11.true_false%>"><%= a11.answer_text %><p class="t3-f4"></p></label>
+            <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q3a4" type="radio" name="q_answer" value="<%=a12.true_false%>"><%= a12.answer_text %><p class="t3-f4"></p></label>
+          </div>
+          <form action="/quizzes/:id/results" method="POST"><button type="submit" id="buttonsave">save<div id="result"></div></button></form>
       </div>
     <div class="modal-footer text-muted">
     <span id="answer"></span>
@@ -51,6 +75,8 @@
 </div>
 </div>
 </div>
+
+</body>
 <!-- <script>
  $(function(){
       var loading = $('#loadbar').hide();

@@ -62,148 +62,234 @@ styling the main page;
 
 
 
-{
-    id: 1,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'The day on which the Sun’s direct rays cross the celestial equator is called:',
-    question_id: 1,
-    answer_text: 'The Soltice',
-    true_false: false },
-  anonymous {
-    id: 2,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'The day on which the Sun’s direct rays cross the celestial equator is called:',
-    question_id: 1,
-    answer_text: 'The Elcipse',
-    true_false: false },
-  anonymous {
-    id: 3,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'The day on which the Sun’s direct rays cross the celestial equator is called:',
-    question_id: 1,
-    answer_text: 'Easter',
-    true_false: false },
-  anonymous {
-    id: 4,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'The day on which the Sun’s direct rays cross the celestial equator is called:',
-    question_id: 1,
-    answer_text: 'The Equinox',
-    true_false: true },
-  anonymous {
-    id: 5,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Who invented the telescope?',
-    question_id: 2,
-    answer_text: 'Hans Lippershey',
-    true_false: true },
-  anonymous {
-    id: 6,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Who invented the telescope?',
-    question_id: 2,
-    answer_text: 'Galileo',
-    true_false: false },
-  anonymous {
-    id: 7,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Who invented the telescope?',
-    question_id: 2,
-    answer_text: 'Johannes Kepler',
-    true_false: false },
-  anonymous {
-    id: 8,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Who invented the telescope?',
-    question_id: 2,
-    answer_text: 'Archimedes',
-    true_false: false },
-  anonymous {
-    id: 9,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Which of these objects is the farthest from the Sun?',
-    question_id: 3,
-    answer_text: 'Saturn',
-    true_false: false },
-  anonymous {
-    id: 10,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Which of these objects is the farthest from the Sun?',
-    question_id: 3,
-    answer_text: 'Kuiper Belt',
-    true_false: false },
-  anonymous {
-    id: 11,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Which of these objects is the farthest from the Sun?',
-    question_id: 3,
-    answer_text: '90377 Sedna',
-    true_false: true },
-  anonymous {
-    id: 12,
-    user_id: 1,
-    title: 'about the universe',
-    time_created: 2020-06-30T00:01:26.850Z,
-    subject: 'Astronomy',
-    public: true,
-    quiz_id: 1,
-    question_text: 'Which of these objects is the farthest from the Sun?',
-    question_id: 3,
-    answer_text: 'Neptune',
-    true_false: false } ]
+<!-- Page-specific content -->
 
+      <div class ="body-inner-new-quiz">
+        <div class="new-quiz-button">
+          <button id="create-quiz-button">Create New Quiz</button>
+        </div>
+      </div>
+
+      <div class ="body-inner-new-quiz">
+
+      </div>
+      <div class ="body-inner-quizzes">
+        <div class ="body-inner-quizzes-title">
+
+          <form id="quiz-form" action="/quizzes" method="POST">
+            <!-- <div class ="body-inner-new-quiz-title">
+              <p>Create your quiz</p>
+            </div> -->
+            <label for="title">Quiz Title</label>
+            <input type="text" name="title">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject">
+            <label for="question_text">Question</label>
+            <input type="text" name="question_text">
+            <div>
+              <label for="answer_text1">Answer 1</label>
+              <input type="text" name="answer_text1">
+              <!-- <input type="radio" name="answer1" id="answer1" value="answer1"> -->
+            </div>
+            <div>
+              <label for="answer_text2">Answer 2</label>
+              <input type="text" name="answer_text2">
+              <!-- <input type="radio" name="answer1" id="answer2" value="answer2"> -->
+            </div>
+            <div>
+              <label for="answer_text3">Answer 3</label>
+              <input type="text" name="answer_text3">
+              <!-- <input type="radio" name="answer1" id="answer3" value="answer3"> -->
+            </div>
+            <div>
+              <label for="answer_text4">Answer 4</label>
+              <input type="text" name="answer_text4">
+              <!-- <input type="radio" name="true" id="answer4" value="answer4"> -->
+              <p>Correct answer is:</p>
+              <select name="rightAnswer-Question1">
+                <option value="answer1">answer1</option>
+                <option value="answer2">answer2</option>
+                <option value="answer3">answer3</option>
+                <option value="answer4">answer4</option>
+              </select>
+            </div>
+            <label for="question_text">Question2</label>
+            <input type="text" name="question2_text">
+            <div>
+              <label for="answer1">Answer 1</label>
+              <input type="text" name="answer2_text1">
+              <!-- <input type="radio" name="answer2" id="answer1" value="answer1"> -->
+            </div>
+            <div>
+              <label for="answer2">Answer 2</label>
+              <input type="text" name="answer2_text2">
+              <!-- <input type="radio" name="answer2" id="answer2" value="answer2"> -->
+            </div>
+            <div>
+              <label for="answer3">Answer 3</label>
+              <input type="text" name="answer2_text3">
+              <!-- <input type="radio" name="answer2" id="answer3" value="answer3"> -->
+            </div>
+            <div>
+              <label for="answer4">Answer 4</label>
+              <input type="text" name="answer2_text4">
+              <!-- <input type="radio" name="answer2" id="answer4" value="answer4"> -->
+              <p>Correct answer is:</p>
+              <select name="rightAnswer-Question2">
+                <option value="answer1">answer1</option>
+                <option value="answer2">answer2</option>
+                <option value="answer3">answer3</option>
+                <option value="answer4">answer4</option>
+              </select>
+            </div>
+            <label for="question_text">Question3</label>
+            <input type="text" name="question2_text">
+            <div>
+              <label for="answer1">Answer 1</label>
+              <input type="text" name="answer3_text1">
+              <!-- <input type="radio" name="answer3" id="answer1" value="answer1"> -->
+            </div>
+            <div>
+              <label for="answer2">Answer 2</label>
+              <input type="text" name="answer3_text2">
+              <!-- <input type="radio" name="answer3" id="answer2" value="answer2"> -->
+            </div>
+            <div>
+              <label for="answer3">Answer 3</label>
+              <input type="text" name="answer3_text3">
+              <!-- <input type="radio" name="answer3" id="answer3" value="answer3"> -->
+            </div>
+            <div>
+              <label for="answer4">Answer 4</label>
+              <input type="text" name="answer3_text4">
+              <!-- <input type="radio" name="answer3" id="answer4" value="answer4"> -->
+              <p>Correct answer is:</p>
+              <select name="rightAnswer-Question3">
+                <option value="answer1">answer1</option>
+                <option value="answer2">answer2</option>
+                <option value="answer3">answer3</option>
+                <option value="answer4">answer4</option>
+              </select>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+
+        </div>
+        <div id="quiz-container">
+          <section class="quizzes"></section>
+      </div>
+
+
+      </div>
+      <div class ="body-inner-quizzes">
+        <!-- <p>User's Quizzes</p> -->
+      <section id="quiz-container"></section>
+    </div>
+    </div>
+  </body>
+
+  <!-- CSS -->
+ .body-wrap {
+  overflow: hidden;
+  /* Sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 200vh;
+  background-color: #006fd1;
+}
+
+.body-box {
+
+}
+
+.body-inner-new-quiz {
+  height: 100px;
+  /* background-color: lightblue; */
+  margin-top: 10px;
+  color: white;
+  /* border: solid pink 3px; */
+}
+
+.body-inner-new-quiz-title {
+  display: flex;
+  justify-content: center;
+}
+
+.new-quiz-button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: pink;
+  border-radius: 10px;
+}
+
+.body-inner-quizzes {
+  /* background-color: lightblue; */
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.body-inner-quizzes-title {
+  display: flex;
+  justify-content: center;
+}
+
+.quizzes-display {
+  /* background-color: orange; */
+  height: 150px;
+  padding: 0px 40px;
+}
+
+.user-quiz{
+  border: solid pink 3px;
+  padding: 0px 60px;
+}
+
+#quiz-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 165px;
+  overflow: scroll;
+  /* overflow-x: scroll; */
+}
+
+#quiz-form {
+  display: flex;
+  flex-direction: column;
+  margin: -200px 0px 20px 0px;
+}
+
+#quiz-form div {
+  display: flex;
+  flex-direction: row;
+  margin: flex;
+}
+
+.user-quiz {
+  border: solid black 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-questions {
+  background-color: orange;
+  height: 400px;
+}
+
+/* body */
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* create quiz */
+.quiz-form label {
+  display: flex;
+  justify-content: center;
+}
