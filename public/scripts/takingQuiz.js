@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $("#modal-content-id").hide();
   let counter = 0;
   $("#q1a1").on('click', function(event) {
     if ($("#q1a1").val() === 'true') {
@@ -99,11 +100,16 @@ $(document).ready(function() {
   });
   $("#buttonsave").on('click', function(event) {
     event.preventDefault();
+    const id = $("#qid1").html();
+    console.log('id isssss     ', id);
     const data = $("#result").html();
     console.log(data);
-    $.post('/quizzes/1/results', data)
+    $.post(`/quizzes/${id}/results`, data)
       .then(function(data) {
-        console.log('THIS IS MY DATA>>>>', data)
+        console.log('THIS IS MY DATA>>>>', data);
+        $(".modal-content").slideUp();
+        $("#modal-body-id").append(`<h1>Results: ${counter} out of 3</h1>`);
+        $("#modal-content-id").slideDown();
       });
   });
 });

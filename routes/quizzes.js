@@ -32,7 +32,7 @@ module.exports = (db) => {
     JOIN answers ON questions.id = answers.question_id
     WHERE quizzes.id =${req.params.id};`)
       .then(data => {
-        const quizzes = {a1: data.rows[0], a2: data.rows[1], a3: data.rows[2], a4: data.rows[3], a5: data.rows[4], a6: data.rows[5], a7: data.rows[6], a8: data.rows[7], a9: data.rows[8], a10: data.rows[9], a11: data.rows[10], a12: data.rows[11]};
+        const quizzes = {a1: data.rows[0], a2: data.rows[1], a3: data.rows[2], a4: data.rows[3], a5: data.rows[4], a6: data.rows[5], a7: data.rows[6], a8: data.rows[7], a9: data.rows[8], a10: data.rows[9], a11: data.rows[10], a12: data.rows[11], userTakingQuizId: 1};
         res.render('quiz', quizzes);
       })
       .catch(err => {
@@ -53,6 +53,8 @@ module.exports = (db) => {
         res.json(data);
       });
   });
+
+
 
   router.post("/", (req, res) => {
     console.log(req.body);

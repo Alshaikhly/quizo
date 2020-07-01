@@ -23,10 +23,11 @@ crossorigin="anonymous"></script>
 
 <div class="container-fluid bg-info"></div>
     <div class="modal-dialog">
+      <div id="modal-content-id" class="modal-content"><div id="modal-body-id" class="modal-body"></div></div> <!-- empty div going to insert results here once quiz is submitted-->
       <div class="modal-content">
          <div class="modal-header">
-            <h3><span class="label label-warning" id="qid1">1</span> <%= a1.quiz_id %></h3>
-            <h3><span class="label label-warning" id="qid">1</span> <%= a1.question_text %></h3>
+            <h4><span class="label label-warning" id="qid1"><%= a1.quiz_id %></span><%= a1.title %></h4>
+            <h5><span class="label label-warning" id="qid">1</span> <%= a1.question_text %></h5>
         </div>
         <div class="modal-body">
 
@@ -50,7 +51,7 @@ crossorigin="anonymous"></script>
             <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q1a4" type="radio" name="q_answer" value="<%=a4.true_false%>"><%= a4.answer_text %><p class="t-f4"></p></label>
           </div>
           <div class="modal-header">
-            <h3><span class="label label-warning" id="qid">2</span> <%= a5.question_text %></h3>
+            <h5><span class="label label-warning" id="qid">2</span> <%= a5.question_text %></h5>
         </div>
         <div class="quiz" id="question2" data-toggle="buttons">
             <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q2a1" type="radio" name="q_answer" value="<%=a5.true_false%>"><%= a5.answer_text %><p class="t2-f4"></p></label>
@@ -59,7 +60,7 @@ crossorigin="anonymous"></script>
             <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q2a4" type="radio" name="q_answer" value="<%=a8.true_false%>"><%= a8.answer_text %><p class="t2-f4"></p></label>
           </div>
           <div class="modal-header">
-            <h3><span class="label label-warning" id="qid">3</span> <%= a9.question_text %></h3>
+            <h5><span class="label label-warning" id="qid">3</span> <%= a9.question_text %></h5>
         </div>
         <div class="quiz" id="question3" data-toggle="buttons">
             <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q3a1" type="radio" name="q_answer" value="<%=a9.true_false%>"><%= a9.answer_text %><p class="t3-f4"></p></label>
@@ -68,6 +69,7 @@ crossorigin="anonymous"></script>
             <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input id="q3a4" type="radio" name="q_answer" value="<%=a12.true_false%>"><%= a12.answer_text %><p class="t3-f4"></p></label>
           </div>
           <form action="/quizzes/:id/results" method="POST"><button type="submit" id="buttonsave">save<div id="result"></div></button></form>
+          <form action="/users/<%= userTakingQuizId %>" method="GET"><button id ="profile-button" type="submit">Take me to my page</button></form>
       </div>
     <div class="modal-footer text-muted">
     <span id="answer"></span>
@@ -75,69 +77,4 @@ crossorigin="anonymous"></script>
 </div>
 </div>
 </div>
-
 </body>
-<!-- <script>
- $(function(){
-      var loading = $('#loadbar').hide();
-      $(document)
-      .ajaxStart(function () {
-          loading.show();
-      }).ajaxStop(function () {
-        loading.hide();
-      });
-
-      $("label.btn").on('click',function () {
-        var choice = $(this).find('input:radio').val();
-        $('#loadbar').show();
-        $('#quiz').fadeOut();
-        setTimeout(function(){
-            $( "#answer" ).html(  $(this).checking(choice) );
-              $('#quiz').show();
-              $('#loadbar').fadeOut();
-            /* something else */
-        }, 1500);
-      });
-
-      $ans = 3;
-
-      $.fn.checking = function(ck) {
-          if (ck != $ans)
-              return 'INCORRECT';
-          else
-              return 'CORRECT';
-      };
-  });
-
-</script> -->
-</body>
-
-<!--
-// <div class ="body-inner-new-quiz">
-//       <div class ="body-inner-new-quiz-title">
-//       <p>TITLE: <%= a1.title %></p>
-//       </div>
-//       <div class="quiz-questions">
-//         <div class="user-quiz">
-//         <p>Q1: <%= a1.question_text %> </p>
-//         <p>A1: <%= a1.answer_text %> </p>
-//         <p>A2: <%= a2.answer_text %> </p>
-//         <p>A3: <%= a3.answer_text %> </p>
-//         <p>A4: <%= a4.answer_text %> </p>
-//         </div>
-//         <div class ="user-quiz">
-//         <p>Q2: <%= a5.question_text %></p>
-//         <p>A1: <%= a5.answer_text %> </p>
-//         <p>A2: <%= a6.answer_text %> </p>
-//         <p>A3: <%= a7.answer_text %> </p>
-//         <p>A4: <%= a8.answer_text %> </p>
-//         </div>
-//         <div class ="user-quiz">
-//         <p>Q3: <%= a9.question_text %></p>
-//         <p>A1: <%= a9.answer_text %> </p>
-//         <p>A2: <%= a10.answer_text %> </p>
-//         <p>A3: <%= a11.answer_text %> </p>
-//         <p>A4: <%= a12.answer_text %> </p>
-//         </div>
-//       </div>
-//     </div> -->
