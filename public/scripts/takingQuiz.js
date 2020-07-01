@@ -1,19 +1,152 @@
-// const { Pool } = require('pg');
-// const dbParams = require('./lib/db.js');
-// const db = new Pool(dbParams);
-// db.connect();
-
 $(document).ready(function() {
-  console.log('yooyoyoyoyoyyoyoyoy');
-  // db.query(`SELECT * FROM quizzes;`)
-  //   .then(data => {
-  //     console.log(data.rows);
-  // });
+  $("#modal-content-id").hide();
+  let counter = 0;
+  $("#q1a1").on('click', function(event) {
+    if ($("#q1a1").val() === 'true') {
+      counter += 1;
+    }
+    $(".t-f1").html($("#q1a1").val());
+    $("#question1").slideUp();
+  });
+  $("#q1a2").on('click', function(event) {
+    if ($("#q1a2").val() === 'true') {
+      counter += 1;
+    }
+    $(".t-f2").html($("#q1a2").val());
+    $("#question1").slideUp();
+  });
+  $("#q1a3").on('click', function(event) {
+    if ($("#q1a3").val() === 'true') {
+      counter += 1;
+    }
+    $(".t-f3").html($("#q1a3").val());
+    $("#question1").slideUp();
+  });
+  $("#q1a4").on('click', function(event) {
+    if ($("#q1a4").val() === 'true') {
+      counter += 1;
+    }
+    $(".t-f4").html($("#q1a4").val());
+    $("#question1").slideUp();
+  });
+
+
+
+  $("#q2a1").on('click', function(event) {
+    if ($("#q2a1").val() === 'true') {
+      counter += 1;
+    }
+    $(".t2-f1").html($("#q2a1").val());
+    $("#question2").slideUp();
+  });
+  $("#q2a2").on('click', function(event) {
+    if ($("#q2a2").val() === 'true') {
+      counter += 1;
+    }
+    $(".t2-f2").html($("#q2a2").val());
+    $("#question2").slideUp();
+  });
+  $("#q2a3").on('click', function(event) {
+    if ($("#q2a3").val() === 'true') {
+      counter += 1;
+    }
+    $(".t2-f3").html($("#q2a3").val());
+    $("#question2").slideUp();
+  });
+  $("#q2a4").on('click', function(event) {
+    if ($("#q2a4").val() === 'true') {
+      counter += 1;
+    }
+    $(".t2-f4").html($("#q2a4").val());
+    $("#question2").slideUp();
+  });
+
+
+  $("#q3a1").on('click', function(event) {
+    if ($("#q3a1").val() === 'true') {
+      counter += 1;
+    }
+    $(".t3-f1").html($("#q3a1").val());
+    $("#question3").slideUp();
+    $("#result").html(counter);
+    console.log($(document));
+  });
+  $("#q3a2").on('click', function(event) {
+    if ($("#q3a2").val() === 'true') {
+      counter += 1;
+    }
+    $(".t3-f2").html($("#q3a2").val());
+    $("#question3").slideUp();
+    $("#result").html(counter);
+    console.log($(document));
+  });
+  $("#q3a3").on('click', function(event) {
+    if ($("#q3a3").val() === 'true') {
+      counter += 1;
+    }
+    $(".t3-f3").html($("#q3a3").val());
+    $("#question3").slideUp();
+    $("#result").html(counter);
+    console.log($(document));
+  });
+  $("#q3a4").on('click', function(event) {
+    if ($("#q3a4").val() === 'true') {
+      counter += 1;
+    }
+    $(".t3-f4").html($("#q3a4").val());
+    $("#question3").slideUp();
+    $("#result").html(counter);
+    console.log($("#result"));
+  });
+  $("#buttonsave").on('click', function(event) {
+    event.preventDefault();
+    const id = $("#qid1").html();
+    console.log('id isssss     ', id);
+    const data = $("#result").html();
+    console.log(data);
+    $.post(`/quizzes/${id}/results`, data)
+      .then(function(data) {
+        console.log('THIS IS MY DATA>>>>', data);
+        $(".modal-content").slideUp();
+        $("#modal-body-id").append(`<h1>Results: ${counter} out of 3</h1>`);
+        $("#modal-content-id").slideDown();
+      });
+  });
 });
 
 
+// const data = $(document);
+// $.get('/quizzes/:id/results', data)
+// .then(function(data) {
+//   console.log('THIS IS MY DATA>>>>', data)
+// });
 
-/*
-on click, query the datbase and see if the selected answer is marked as true or false. if true add to a score counter variable ++
-once the quiz is finished insert the total score along with the quiz_id into the quizzes_solved table in DB.
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

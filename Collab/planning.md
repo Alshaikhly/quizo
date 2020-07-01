@@ -169,11 +169,131 @@ styling the main page;
             <button type="submit">Submit</button>
           </form>
 
+<<<<<<< HEAD
         </div>
         <div id="quiz-container">
           <section class="quizzes"></section>
       </div>
 
+=======
+<!-- Page-specific content -->
+
+      <div class ="body-inner-new-quiz">
+        <div class="new-quiz-button">
+          <button id="create-quiz-button">Create New Quiz</button>
+        </div>
+      </div>
+
+      <div class ="body-inner-new-quiz">
+
+      </div>
+      <div class ="body-inner-quizzes">
+        <div class ="body-inner-quizzes-title">
+
+          <form id="quiz-form" action="/quizzes" method="POST">
+            <!-- <div class ="body-inner-new-quiz-title">
+              <p>Create your quiz</p>
+            </div> -->
+            <label for="title">Quiz Title</label>
+            <input type="text" name="title">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject">
+            <label for="question_text">Question</label>
+            <input type="text" name="question_text">
+            <div>
+              <label for="answer_text1">Answer 1</label>
+              <input type="text" name="answer_text1">
+              <!-- <input type="radio" name="answer1" id="answer1" value="answer1"> -->
+            </div>
+            <div>
+              <label for="answer_text2">Answer 2</label>
+              <input type="text" name="answer_text2">
+              <!-- <input type="radio" name="answer1" id="answer2" value="answer2"> -->
+            </div>
+            <div>
+              <label for="answer_text3">Answer 3</label>
+              <input type="text" name="answer_text3">
+              <!-- <input type="radio" name="answer1" id="answer3" value="answer3"> -->
+            </div>
+            <div>
+              <label for="answer_text4">Answer 4</label>
+              <input type="text" name="answer_text4">
+              <!-- <input type="radio" name="true" id="answer4" value="answer4"> -->
+              <p>Correct answer is:</p>
+              <select name="rightAnswer-Question1">
+                <option value="answer1">answer1</option>
+                <option value="answer2">answer2</option>
+                <option value="answer3">answer3</option>
+                <option value="answer4">answer4</option>
+              </select>
+            </div>
+            <label for="question_text">Question2</label>
+            <input type="text" name="question2_text">
+            <div>
+              <label for="answer1">Answer 1</label>
+              <input type="text" name="answer2_text1">
+              <!-- <input type="radio" name="answer2" id="answer1" value="answer1"> -->
+            </div>
+            <div>
+              <label for="answer2">Answer 2</label>
+              <input type="text" name="answer2_text2">
+              <!-- <input type="radio" name="answer2" id="answer2" value="answer2"> -->
+            </div>
+            <div>
+              <label for="answer3">Answer 3</label>
+              <input type="text" name="answer2_text3">
+              <!-- <input type="radio" name="answer2" id="answer3" value="answer3"> -->
+            </div>
+            <div>
+              <label for="answer4">Answer 4</label>
+              <input type="text" name="answer2_text4">
+              <!-- <input type="radio" name="answer2" id="answer4" value="answer4"> -->
+              <p>Correct answer is:</p>
+              <select name="rightAnswer-Question2">
+                <option value="answer1">answer1</option>
+                <option value="answer2">answer2</option>
+                <option value="answer3">answer3</option>
+                <option value="answer4">answer4</option>
+              </select>
+            </div>
+            <label for="question_text">Question3</label>
+            <input type="text" name="question2_text">
+            <div>
+              <label for="answer1">Answer 1</label>
+              <input type="text" name="answer3_text1">
+              <!-- <input type="radio" name="answer3" id="answer1" value="answer1"> -->
+            </div>
+            <div>
+              <label for="answer2">Answer 2</label>
+              <input type="text" name="answer3_text2">
+              <!-- <input type="radio" name="answer3" id="answer2" value="answer2"> -->
+            </div>
+            <div>
+              <label for="answer3">Answer 3</label>
+              <input type="text" name="answer3_text3">
+              <!-- <input type="radio" name="answer3" id="answer3" value="answer3"> -->
+            </div>
+            <div>
+              <label for="answer4">Answer 4</label>
+              <input type="text" name="answer3_text4">
+              <!-- <input type="radio" name="answer3" id="answer4" value="answer4"> -->
+              <p>Correct answer is:</p>
+              <select name="rightAnswer-Question3">
+                <option value="answer1">answer1</option>
+                <option value="answer2">answer2</option>
+                <option value="answer3">answer3</option>
+                <option value="answer4">answer4</option>
+              </select>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+
+        </div>
+        <div id="quiz-container">
+          <section class="quizzes"></section>
+      </div>
+
+>>>>>>> 9437d1fa7a27230796e3a732a3d7ccee343186db
 
       </div>
       <div class ="body-inner-quizzes">
