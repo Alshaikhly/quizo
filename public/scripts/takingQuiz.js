@@ -108,7 +108,7 @@ $(document).ready(function() {
       .then(function(data) {
         console.log('THIS IS MY DATA>>>>', data);
         $(".modal-content").slideUp();
-        $("#modal-body-id").append(`<h1>Results: ${counter} out of 3</h1>`);
+        $("#modal-body-id").prepend(`<h1>Results: ${counter} out of 3</h1>`);
         $("#modal-content-id").slideDown();
       });
   });

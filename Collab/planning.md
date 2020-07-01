@@ -14,12 +14,12 @@ users can share a link to the result of their attempt
 
 -User stories:
 As a user I want to be able to create/save quizzes, so that I could share them as a URL later.
-As a user I want to be able to make my quizzes private, but shareable with designated users.
+* As a user I want to be able to make my quizzes private, but shareable with designated users.
 As a user I want to be able to browse other user's quizzes.
 As a user I want to be able to see my previous quiz results.
 As a user I can attempt quizzes and save the results.
 As a user I want to be able to view other user's quizzes on the home page.
-As a user I want to be able to share my results on a quiz.
+** As a user I want to be able to share my results on a quiz.
 
 
 -Routes 
