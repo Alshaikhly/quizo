@@ -1,5 +1,5 @@
-const createQuizElement = quiz => {
 
+const createQuizElement = quiz => {
   const quizElement = `
   <a href="http://localhost:8080/quizzes/${quiz.id}">
     <div class ="quizzes-display">

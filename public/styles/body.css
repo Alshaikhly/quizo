@@ -49,7 +49,8 @@ button {
 }
 
 .quizzes-display {
-  /* background-color: orange; */
+  font-weight: 100;
+  color: whitesmoke;
   height: 150px;
   padding: 0px 40px;
 }
@@ -123,4 +124,9 @@ table {
 th {
   width: 200px;
   border: solid white 1px;
+}
+
+.score {
+  text-align: center;
+  vertical-align: middle;
 }

@@ -1,0 +1,14 @@
+.site-footer {
+  background-color:pink;
+  font-size:15px;
+  color:white;
+}
+
+.site-footer h6
+{
+  color:white;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:0px;
+  letter-spacing:1px
+}

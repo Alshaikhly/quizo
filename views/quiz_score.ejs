@@ -49,7 +49,7 @@
     <% for (let result in results) { %>
     <tr>
     <td><%= result %></td>
-    <td><%= results[result].score%></td>
+    <td class="score"><%= results[result].score%></td>
     </tr>
     <% }%>
   </tbody>
@@ -57,9 +57,11 @@
         </div>
       </div>
     </div>
+  </div>
 </body>
 
 
-<body class="body-box">
-  <div class="body-wrap">
 
+<footer>
+  <%- include('./partials/footer') %>
+</footer>
