@@ -7,7 +7,7 @@ const imageRotation = () => {
 const createQuizElement = quiz => {
 
   const quizElement = `
-  <a href="http://localhost:8080/quizzes/${quiz.id}">
+  <a href="quizzes/${quiz.id}">
     <div class ="quizzes-display">
         <div class ="user-quiz" style="background-image: url('${imageRotation()}'); background-position: center; background-size: cover">
           <p>title: ${quiz.title}</p>
