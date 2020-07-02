@@ -20,18 +20,17 @@ const createQuizElement = quiz => {
 }
 
 const renderQuizzes = function(quizzes) {
-
   for (const quiz of quizzes) {
-    console.log(quiz.title)
-    let $quizElement = createQuizElement(quiz);
-    $('#quiz-container').prepend($quizElement);
+    if (quiz.public) {
+      let $quizElement = createQuizElement(quiz);
+      $('#quiz-container').prepend($quizElement);
+    }
   }
 };
 
 
 
 $(document).ready(function() {
-  console.log('check check');
   $("#quiz-form").hide();
   $("#create-quiz-button").on('click', function(event) {
     if ($('#quiz-form').is(':hidden')) {
@@ -44,9 +43,7 @@ $(document).ready(function() {
   const loadquizzes = () => {
     $.getJSON('/quizzes/')
       .then(function(data) {
-        console.log(data.users);
-        // $('#tweets-container').empty();
-
+        $('#quiz-container').empty();
         renderQuizzes(data.users);
       });
   };
