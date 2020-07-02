@@ -1,12 +1,13 @@
-/* header */
+
 .site-header {
   position: relative;
-  /* background-color: yellow; */
+
   height: 50px;
+  background-color: #006fd1;
 }
 
 .header-container {
-  /* background-color: orange; */
+
   display: flex;
   justify-content: space-evenly;
   color: white;
@@ -14,12 +15,12 @@
 
 .header-logo {
   padding-left: 20px;
-  /* background-color: black; */
+
   width: 40%;
 }
 
 .header-buttons {
-  /* background-color: black; */
+
   display: flex;
   justify-content: flex-end;
   width: 40%;
