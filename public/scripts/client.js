@@ -28,15 +28,26 @@ const renderQuizzes = function(quizzes) {
   }
 };
 
+let quizForm = false;
 
 
 $(document).ready(function() {
-  $("#quiz-form").hide();
-  $("#create-quiz-button").on('click', function(event) {
-    if ($('#quiz-form').is(':hidden')) {
-      $("#quiz-form").slideDown();
+  // $("#quiz-form").hide();
+  // $("#create-quiz-button").on('click', function(event) {
+  //   if ($('#quiz-form').is(':hidden')) {
+  //     $("#quiz-form").slideDown();
+  //   } else {
+  //     $("#quiz-form").slideUp();
+  //   }
+  // });
+
+  $("#create-quiz-button").click(function() {
+    if (!quizForm) {
+      quizForm = true;
+      $("#body-inner-quizzes").slideDown("fast");
     } else {
-      $("#quiz-form").slideUp();
+      quizForm = false;
+      $("#body-inner-quizzes").slideUp("fast");
     }
   });
 

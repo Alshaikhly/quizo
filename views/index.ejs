@@ -14,28 +14,26 @@
 
 
   <body class="body-box">
-    <div class="body-wrap">
       <!-- Top nav bar (fixed) -->
       <header>
         <%- include('./partials/header') %>
       </header>
-
+    <div class="body-wrap">
       <!-- Page-specific content -->
       <div class ="body-inner-new-quiz">
         <div class ="body-inner-new-quiz-title">
-          <p>New quiz</p>
+          <p></p> <!-- this empty p tag hold the entire site together dont touch!-->
         </div>
         <div class="new-quiz-button">
-          <button id="create-quiz-button">Create New Quiz</button>
+          <button class="button" id="create-quiz-button">Create New Quiz</button>
         </div>
       </div>
 
       <div class ="body-inner-new-quiz">
         <div class ="body-inner-new-quiz-title">
-          <p>Create your quiz</p>
         </div>
       </div>
-      <div class ="body-inner-quizzes">
+      <section id="body-inner-quizzes">
         <div class ="body-inner-quizzes-title">
           <form id="quiz-form" action="/quizzes" method="POST">
             <!-- <div> -->
@@ -136,22 +134,20 @@
                 <option value="answer3_text4">answer4</option>
               </select>
             </div>
-            <button type="submit">Submit</button>
+              <button class="button" type="submit">Submit</button>
           </form>
         </div>
-      </div>
-      <div id="quiz-container">
-        <section class="quizzes"></section>
-    </div>
+      </section>
 
-      <div class ="body-inner-quizzes">
+      <!-- <div class ="body-inner-quizzes">
         <div class ="body-inner-quizzes-title">
-          <!-- <p>User's Quizzes</p> -->
         </div>
         <section id="quiz-container"></section>
-      </div>
+      </div> -->
 
     </div>
+    <section id="quiz-container">
+    </section>
   </body>
 
   <footer>

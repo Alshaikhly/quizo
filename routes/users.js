@@ -12,9 +12,7 @@ let getUserResults = results => {
   let returnResults = {};
  for (let i = 0; i < results.length; i++) {
   returnResults[results[i].title] = results[i];
-  // returnResults[results[i]].score = results[i].score;
  }
-  // console.log(returnResults);
   return returnResults;
 }
 
@@ -41,11 +39,3 @@ module.exports = (db) => {
   return router;
 };
 
-`SELECT users.name, users.email, quizzes.title, questions.quiz_id, score FROM users
-JOIN quizzes_solved ON users.id = user_id
-JOIN quizzes ON quizzes.id = quizzes_solved.quiz_id
-JOIN questions ON questions.id = quizzes_solved.quiz_id
-JOIN answers ON answers.question_id = questions.id
-WHERE users.id = $1
-GROUP BY quizzes.title,user.name,
-ORDER BY quiz_id;`
