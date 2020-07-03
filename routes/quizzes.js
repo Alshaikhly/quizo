@@ -43,7 +43,7 @@ module.exports = (db) => {
   });
 
   router.post("/:id/results", (req, res) => {
-    const score = Number(Object.keys(req.body)[0]);
+    const score = Number(Object.keys(req.body)[0])
     db.query(`INSERT INTO quizzes_solved (
       quiz_id, user_id, score)
       VALUES($1, 1, $2)
